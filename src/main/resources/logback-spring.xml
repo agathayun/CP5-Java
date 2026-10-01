@@ -1,0 +1,23 @@
+<configuration>
+    <!-- Raiz da configuração do LogBack -->
+    <property name="LOG_PATTERN"
+              value="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level
+                     [%thread] [%X{traceId:-},%X{spanId:-}]
+                     %logger{36} - %msg%n"/>
+    <!-- Padrão de log com traceId e spanId do MDC -->
+    <appender name="CONSOLE"
+              class="ch.qos.logback.core.ConsoleAppender">
+        <!-- Appender que escreve no console -->
+        <encoder>
+            <!-- Encoder que formata a saída -->
+            <pattern>${LOG_PATTERN}</pattern>
+            <!--Usa padrão definido acima -->
+        </encoder>
+    </appender>
+
+    <root level="INFO">
+        <!-- Nível global do log -->
+        <appender-ref ref="CONSOLE" />
+    </root>
+
+</configuration>
