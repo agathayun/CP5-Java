@@ -5,8 +5,8 @@ import java.math.BigDecimal;
 public record PedidoResponse(
         Long id,
         String cliente,
-        BigDecimal valorTotal,
-        BigDecimal frete,
+        double valorTotal,
+        double frete,
         String transportadora,
         long tempoProcessamentoMs
 ) {}
