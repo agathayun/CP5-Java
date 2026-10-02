@@ -1,5 +1,5 @@
 server:
-  port:8080
+  port: 8080
 spring:
   application:
     name: pedido-observavel
@@ -11,15 +11,16 @@ management:
   endpoint:
     health:
       show-details: always
-    metrics:
-      tags:
-        application: ${spring.application.name}
+  metrics:
+    tags:
+      application: ${spring.application.name}
+  tracing:
+    sampling:
+      probability: 1.0
+  zipkin:
     tracing:
-      sampling:
-        probability: 1.0
-    zipkin:
-      tracing:
-        endpoint: http://localhost:9411/api/v2/spans
+      endpoint: http://localhost:9411/api/v2/spans
 
-  logging:
-    pattern: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}"
+logging:
+  pattern:
+    console: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}"
