@@ -1,6 +1,4 @@
-package com.fiap.pedido_observavel.dto;
-
-import java.math.BigDecimal;
+package com.fiap.servico_pedido.dto;
 
 public record PedidoResponse(
         Long id,

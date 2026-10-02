@@ -15,7 +15,7 @@
 	</parent>
 
 	<groupId>com.exemplo</groupId>
-	<artifactId>pedido-observavel</artifactId>
+	<artifactId>servico-pedido</artifactId>
 	<version>1.0.0</version>
 	<name>pedido-observavel</name>
 

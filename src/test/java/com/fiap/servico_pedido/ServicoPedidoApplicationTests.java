@@ -1,10 +1,10 @@
-package com.fiap.pedido_observavel;
+package com.fiap.servico_pedido;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class PedidoObservavelApplicationTests {
+class ServicoPedidoApplicationTests {
 
 	@Test
 	void contextLoads() {

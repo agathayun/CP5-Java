@@ -1,6 +1,6 @@
-package com.fiap.pedido_observavel.service;
+package com.fiap.servico_pedido.service;
 
-import com.fiap.pedido_observavel.dto.PedidoResponse;
+import com.fiap.servico_pedido.dto.PedidoResponse;
 import io.micrometer.core.instrument.Counter;
 import io.micrometer.core.instrument.MeterRegistry;
 import io.micrometer.core.instrument.Timer;

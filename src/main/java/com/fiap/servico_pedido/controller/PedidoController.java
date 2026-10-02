@@ -1,7 +1,7 @@
-package com.fiap.pedido_observavel.controller;
+package com.fiap.servico_pedido.controller;
 
-import com.fiap.pedido_observavel.dto.PedidoResponse;
-import com.fiap.pedido_observavel.service.PedidoService;
+import com.fiap.servico_pedido.dto.PedidoResponse;
+import com.fiap.servico_pedido.service.PedidoService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

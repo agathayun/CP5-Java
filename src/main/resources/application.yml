@@ -2,7 +2,7 @@ server:
   port: 8080
 spring:
   application:
-    name: pedido-observavel
+    name: servico-pedido
 management:
   endpoints:
     web:

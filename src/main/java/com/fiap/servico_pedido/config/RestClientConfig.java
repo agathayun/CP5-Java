@@ -1,4 +1,4 @@
-package com.fiap.pedido_observavel.config;
+package com.fiap.servico_pedido.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
