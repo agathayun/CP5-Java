@@ -23,6 +23,7 @@ public class PedidoService {
 
     private final Timer pedidosDuracao;
     private final Timer freteDuracao;
+    private final Counter freteChamadas;
 
     public PedidoService(RestClient restClient, MeterRegistry registry) {
         this.restClient = restClient;
@@ -35,6 +36,11 @@ public class PedidoService {
 
         this.freteDuracao = Timer.builder("frete_duracao")
                 .description("Duração das chamadas ao serviço de frete")
+                .publishPercentiles(0.50, 0.95, 0.99)
+                .register(registry);
+
+        this.freteChamadas = Counter.builder("frete_chamadas")
+                .description("Total de chamadas ao serviço de frete")
                 .register(registry);
     }
 
@@ -52,6 +58,8 @@ public class PedidoService {
         try {
 
             log.info("Chamando serviço de frete para o pedido {}", id);
+
+            freteChamadas.increment();
 
             long inicioFrete = System.nanoTime();
 
