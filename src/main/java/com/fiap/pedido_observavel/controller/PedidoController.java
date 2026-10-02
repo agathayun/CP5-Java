@@ -14,16 +14,19 @@ public class PedidoController {
     private final PedidoService pedidoService;
 
     public PedidoController(PedidoService pedidoService){
+
         this.pedidoService = pedidoService;
     }
 
     @GetMapping("/{id}")
     public PedidoResponse buscar (@PathVariable Long id){
+
         return pedidoService.processar(id);
     }
 
     @GetMapping("/lentos")
     public String lento(){
+
         return pedidoService.processarLento();
     }
 }
